@@ -8,7 +8,9 @@
 		"declarationMap": true,
 		"outDir": "dist",
 		"rootDir": "src",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
 		"jsx": "react-jsx",
 		"types": ["vitest/globals", "jsdom"],
 		"strict": true

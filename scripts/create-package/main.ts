@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 // Directory of this script (scripts/create-package)
 const __dirname = dirname(__filename);
 
-interface PackageOptions {
+export interface PackageOptions {
 	packageName: string;
 	directoryName: string;
 	packageType: "client" | "backend" | "shared";
@@ -288,7 +288,7 @@ const getTemplateFiles = (options: PackageOptions): TemplateFile[] => {
 };
 
 // Create package directory and files
-const createPackage = async (options: PackageOptions): Promise<void> => {
+export const createPackage = async (options: PackageOptions): Promise<void> => {
 	const projectRoot = join(__dirname, "../../");
 	const packagesDir = join(projectRoot, "packages");
 	const packageDir = join(packagesDir, options.directoryName);

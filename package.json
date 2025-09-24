@@ -1,5 +1,6 @@
 {
 	"name": "fullstack-turbo-split",
+	"type": "module",
 	"scripts": {
 		"create-package": "npx tsx ./scripts/create-package/main.ts"
 	},

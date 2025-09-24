@@ -215,3 +215,6 @@ sentry.edge.config.ts
 **/public/sw.js.map
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
+
+# Smoke-test output
+packages/smoke-*
