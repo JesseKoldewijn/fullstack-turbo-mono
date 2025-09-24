@@ -1,0 +1,27 @@
+{
+	"name": "@acme/{{packageName}}",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"type-check": "tsc --noEmit",
+		"test": "vitest",
+		"test:watch": "vitest --watch",
+		"test:ci": "vitest run --run"
+	},
+	"peerDependencies": {
+		"react": "^18.0.0"
+	},
+	"devDependencies": {
+		"typescript": "^5.2.2",
+		"@types/react": "^18.0.0",
+		"vitest": "^0.34.1",
+		"jsdom": "^22.0.0",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/jest-dom": "^6.0.0",
+		"@types/jest": "^29.5.0"
+	}
+}
