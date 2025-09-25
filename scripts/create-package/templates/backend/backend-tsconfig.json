@@ -6,7 +6,7 @@
 		"outDir": "./dist",
 		"rootDir": "./src",
 		"strict": true,
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
@@ -17,7 +17,10 @@
 		"sourceMap": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"exactOptionalPropertyTypes": true,
+		"allowImportingTsExtensions": false,
+		"noEmit": false
 	},
 	"include": ["src/**/*"],
 	"exclude": ["node_modules", "dist"]

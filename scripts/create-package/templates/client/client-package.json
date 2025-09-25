@@ -5,17 +5,29 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"files": ["dist/**/*", "src/**/*", "README.md"],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
 	"scripts": {
-		"build": "tsc",
+		"build": "tsup",
+		"dev": "tsup --watch",
 		"type-check": "tsc --noEmit",
 		"test": "vitest",
 		"test:watch": "vitest --watch",
-		"test:ci": "vitest run --run"
+		"test:ci": "vitest run --run",
+		"prepack": "npm run build",
+		"prepublishOnly": "npm run build"
 	},
 	"peerDependencies": {
 		"react": "^18.0.0"
 	},
 	"devDependencies": {
+		"tsup": "^8.5.0",
 		"typescript": "^5.2.2",
 		"@types/react": "^18.0.0",
 		"react": "^18.2.0",
